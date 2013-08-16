@@ -38,5 +38,4 @@ void textEdit::cursorPositionChanged() {
     linePos=textCursor().blockNumber();
     //emit a signal that is useful to know when the line is changed
     emit cursorLineChanged(linePos);
-    std::cout<<"hola"<<std::endl;
 }
