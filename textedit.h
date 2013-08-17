@@ -8,9 +8,12 @@
 
 #ifndef TEXTEDIT_H
 #define TEXTEDIT_H
-
 #include <QTextEdit>
 #include <QScrollBar>
+#include <QTimer>
+
+
+
 
 class textEdit : public QTextEdit
 {
@@ -22,8 +25,16 @@ private:
     QScrollBar *horizontalScrollBar;
     ///@brief it is used to now the last line position.
     int linePos;
+    ///@brief used to invoc updateText after a periord time
+    QTimer time1;
+    ///@brief time interval for update updateTime()
+    int timeInterval;
+private:
+    QString wordAnalize(QString word);
 public:
     explicit textEdit(QWidget *parent = 0);
+    ///@brief the time period after that the updateTime is called
+    int updateTimerInterval();
 signals:
     ///@brief signal that is emitted when the vertical scroll bar is changed
     void verticalScrollMoved(int);
@@ -40,6 +51,11 @@ public slots:
     void horizontalScrollPosChange(int pos);
     ///@brief cursor position
     void cursorPositionChanged();
+    //experimental
+    ///@brief update the text color and detect mistakes
+    void updateText();
+    ///@brief set time interval used to updateText
+    void setUpdateTextTimerInterval(int time);
 
 };
 
