@@ -1,0 +1,21 @@
+#include "expression.h"
+#include <fstream>
+#include <iostream>
+
+expression::expression()
+{
+    int num;
+    short *id;
+    std::string *str;
+    std::string *file;
+    std::ifstream in("basix.txt");
+    in>>num;
+    str=new std::string[num];
+    file=new std::string[num];
+    id=new short[num];
+    for(int i=0;i<num;i++) {
+        in>>str[i];
+        in>>id[i];
+        in>>file[i];
+    }
+}

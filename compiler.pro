@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    textedit.cpp
+    textedit.cpp \
+    expression.cpp
 
 HEADERS  += mainwindow.h \
-    textedit.h
+    textedit.h \
+    expression.h
 
 FORMS    += mainwindow.ui
