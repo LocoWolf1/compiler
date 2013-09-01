@@ -29,7 +29,7 @@ struct express {
      *2: indicate that the expression is like a declaration of a object o structure
      *1: indicate that the expression is a object o structure
      **/
-    char type;
+    short type;
     ///@brief extra informations like method of classes
     void *extra;
     ///@brief of current states

@@ -15,10 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     textedit.cpp \
-    expression.cpp
+    expression.cpp \
+    createxpression.cpp
 
 HEADERS  += mainwindow.h \
     textedit.h \
-    expression.h
+    expression.h \
+    createxpresion.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    createxpresion.ui
